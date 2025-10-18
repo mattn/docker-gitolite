@@ -3,8 +3,8 @@ FROM alpine:3.22.2
 # Install OpenSSH server and Gitolite
 # Unlock the automatically-created git user
 RUN set -x \
- && apk add --no-cache gitolite openssh markdown \
- && passwd -u git
+ && apk add --no-cache gitolite openssh markdown
+# && passwd -u git
 
 # Volume used to store SSH host keys, generated on first run
 VOLUME /etc/ssh/keys
