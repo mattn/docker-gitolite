@@ -38,4 +38,6 @@ else
   su - git -c "gitolite setup"
 fi
 
+git config --global init.defaultBranch main
+
 exec "$@"
